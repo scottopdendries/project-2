@@ -1,0 +1,169 @@
+:root {
+  background-color: #E5E5E5;
+  --black: #000000;
+  --white: #FFFFFF;
+  --yellow: #FEBD2F;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: no-box;
+}
+
+body {
+  font-family: roboto;
+  font-weight: 400;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-rows: 1fr 8fr 10fr 1fr;
+  grid-template-columns: auto;
+  min-height: 100vh;
+  grid-template-areas:
+  "header"
+  "landing"
+  "card-container"
+  "footer"
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: pink;
+  grid-area: header;
+  margin: 0 50px;
+}
+
+/* How to add space between 'Courses' and 'About us' without pushing the logo off-center*/
+.nav-links a {
+  text-decoration: none;
+}
+
+.header button {
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 16px;
+}
+
+.landing {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  grid-area: landing;
+  margin: 0 50px;
+  grid-template-areas:
+  "landing-text landing-image";
+}
+
+/* Unable to center the text. Remains locked to the left */
+.landing-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: landing-text;
+}
+
+.landing-text h1 {
+  font-family: roboto serif;
+  font-weight: 500;
+  font-size: 64px;
+  grid-area: header;
+}
+
+.landing-image {
+  display: flex;
+  justify-content: center;
+  grid-area: landing-image;
+}
+
+/* How to make the image able to stretch and shrink */
+.landing-image img{
+
+}
+
+.card-container {
+  grid-area: card-container;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(3, auto);
+  background-color: blue;
+  margin: 0 50px;
+}
+
+
+/* Cards don't appear to shrink for media queries */
+.card {
+  background-color: pink;
+  height: 324px;
+  width: 400px;
+  font-size: 18px;
+  border-radius: 10%;
+  margin: 25px;
+}
+
+.card h3 {
+  font-family: roboto serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+/* How to change border color */
+.card button{
+  font-size: 18px;
+}
+
+.yellow-card{
+  background-color: var(--yellow);
+  font-family: roboto serif;
+  font-weight: 500;
+  font-size: 40px;
+
+}
+
+.white-card{
+  background-color: var(--white);
+}
+
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: var(--yellow);
+  grid-area: footer;
+}
+
+
+
+/* tablet */
+@media (max-width: 768px){
+  .landing {
+    grid-template-areas:
+    "landing-text"
+    "landing-image";
+  }
+
+  .card-container {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/* phone */
+@media (max-width: 468px){
+  .card-container {
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: auto;
+}
+}
