@@ -1,3 +1,4 @@
+/* Awesome work on using CSS variables! */
 :root {
   background-color: #E5E5E5;
   --black: #000000;
@@ -11,6 +12,7 @@
   box-sizing: border-box;
 }
 
+  /* Nice work on using the correct font for the correct element! */
 body {
   font-family: roboto;
   font-weight: 400;
@@ -21,6 +23,7 @@ button {
   border-radius: 25px;
 }
 
+/* Great work on using grid-template-areas! It is one of the points of the rubric! */
 .grid-container{
   display: grid;
   grid-template-rows: 1fr 3fr 5fr 1fr;
@@ -175,3 +178,6 @@ button {
   transition: all 0.3s ease-in-out;
   background-color: #101010;
 }
+
+/* Overall, beautiful work! You did amazing! You should be proud of yourself!🙌 */
+/* You checked all the boxes of the rubric! Very impressive! */

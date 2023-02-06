@@ -8,6 +8,8 @@
     position: relative;
     padding: 0;
   }
+
+  /* Awesome work on implementing a functional hamburger menu to showup on mobile devices. */
   .nav-links{
     position: fixed;
     transform: translateY(100%);
